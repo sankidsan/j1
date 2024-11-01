@@ -254,6 +254,39 @@ p {
   font-size: 1.125rem;
   line-height: 1.6;
 }
+/* Button Styles */
+.btn-add-to-favorites, .btn-buy-now {
+  background-color: #d4af37; /* Goldish yellow color */
+  border: none; /* Remove border */
+  color: white; /* Text color */
+  font-size: 16px; /* Font size */
+  padding: 8px 15px; /* Padding */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.btn-add-to-favorites:hover, .btn-buy-now:hover {
+  background-color: #b89730; /* Darker shade on hover */
+}
+
+.btn-add-to-favorites:focus, .btn-buy-now:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.5); /* Add a custom focus effect */
+}
+
+/* Ensure buttons don't collide */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items */
+  gap: 10px; /* Space between title, text, and buttons */
+}
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Full width for consistent button alignment */
+  gap: 10px; /* Space between buttons */
+}
 
 /* Contact Form Styling */
 

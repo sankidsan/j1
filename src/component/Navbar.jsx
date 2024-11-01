@@ -1,15 +1,17 @@
-
-
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../component/App.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+    const handleDisabledLink = (event) => {
+        event.preventDefault(); // Prevent navigation
+    };
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
-                {/* Company logo followed by name */}
                 <a className="navbar-brand d-flex align-items-center" href="#">
                     <img 
                         src={`${process.env.PUBLIC_URL}/logo.jpeg`} 
@@ -28,16 +30,16 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/MySection">Home</a>
+                            <Link className="nav-link active" aria-current="page" to="/" onClick={handleDisabledLink}>Home</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/ProductCard">Products</a>
+                            <Link className="nav-link" to="/ProductCard" onClick={handleDisabledLink}>Products</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/About">About</a>
+                            <Link className="nav-link" to="/About" onClick={handleDisabledLink}>About</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/Contact">Contact</a>
+                            <Link className="nav-link" to="/Contact" onClick={handleDisabledLink}>Contact</Link>
                         </li>
                     </ul>
                 </div>

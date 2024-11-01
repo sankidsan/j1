@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css'; // Import your custom CSS
+import GoldRate from './GoldRate';
 
 const MySection = () => {
   return (
@@ -23,6 +24,7 @@ const MySection = () => {
       <p>
         From timeless classics to contemporary designs, our jewellery range is designed to impress and elevate your look. Explore our collection and find the perfect piece to complement your style.
       </p>
+      <GoldRate />
     </div>
   );
 };
